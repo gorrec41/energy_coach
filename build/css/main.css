@@ -115,19 +115,36 @@ textarea {
   opacity: .8;
 }
 
+@media screen and (min-width: 768px) {
+  .title {
+    margin-bottom: 35px;
+    font-size: 20px;
+  }
+  .linkbuttom {
+    display: inline-block;
+    font-size: 14px;
+  }
+}
+
 @media screen and (min-width: 900px) {
   .title {
     margin-bottom: 32px;
     font-size: 26px;
-    color: #020E35;
   }
   .linkbuttom {
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
     font-size: 16px;
-    color: #FFFFFF;
   }
 }
 
 .nav .desctopnav {
+  display: none;
+}
+
+.nav .desctopnav .contact {
   display: none;
 }
 
@@ -138,22 +155,25 @@ textarea {
   content: '';
   width: 40px;
   height: 3px;
-  right: 20px;
+  right: 30px;
   background: rgba(12, 12, 12, 0.37);
   z-index: 100;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
 }
 
 .nav .line {
-  top: 20px;
+  top: 40px;
 }
 
 .nav .line:after {
-  top: 30px;
+  top: 20px;
   right: 0;
 }
 
 .nav .line::before {
-  top: 15px;
+  top: 10px;
   right: 0;
 }
 
@@ -161,11 +181,15 @@ textarea {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
-  background: rgba(255, 255, 255, 0.99);
+  background: #fff;
+  top: 20px;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
 }
 
 .nav .lineactive.line:before {
-  background: rgba(88, 125, 255, 0);
+  background: none;
 }
 
 .nav .lineactive.line:after {
@@ -173,7 +197,10 @@ textarea {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  background: rgba(255, 255, 255, 0.99);
+  background: #fff;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
 }
 
 .nav .burger {
@@ -235,6 +262,77 @@ textarea {
   transition: 1s;
 }
 
+@media screen and (min-width: 768px) {
+  .nav {
+    padding: 20px 60px;
+  }
+  .nav .line,
+  .nav .line:after,
+  .nav .line:before {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 3px;
+    background: #020E35;
+    z-index: 100;
+  }
+  .nav .line:after,
+  .nav .line:before {
+    right: 0;
+  }
+  .nav .line {
+    top: 20px;
+    right: 20px;
+  }
+  .nav .desctopnav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav .desctopnav .logo_nav_link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #020E35;
+  }
+  .nav .desctopnav .descmenu {
+    display: none;
+  }
+  .nav .desctopnav .contactmenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 16px;
+  }
+  .nav .desctopnav .contactmenu .desc_list_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav .desctopnav .contactmenu .desc_list_item .scgiconnav {
+    margin-right: 8px;
+  }
+  .nav .desctopnav .contactmenu .desc_list_item .descnavlink {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #020E35;
+  }
+}
+
 @media screen and (min-width: 850px) {
   .nav {
     padding: 20px 60px;
@@ -292,7 +390,7 @@ textarea {
 
 .header .headercontent {
   color: white;
-  padding: 60px 180px;
+  padding: 25px 20px;
   background: #587dff;
 }
 
@@ -309,6 +407,108 @@ textarea {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
+  color: #FFFFFF;
+}
+
+.header .headerwrap .headerleft .headeraside {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.header .headerwrap .headerleft .headerartical {
+  width: 440px;
+  margin-bottom: 30px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+.header .headerwrap .headerleft .headerprice {
+  margin-bottom: 12px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.header .headerwrap .headerleft .headerprice span {
+  margin-left: 10px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  opacity: 0.3;
+}
+
+.header .headerwrap .headerleft .headercondition {
+  margin-bottom: 12px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+.header .headerwrap .headerbooking {
+  display: inline-block;
+  padding: 16px 24px;
+  background: #F5F8FF;
+  color: #020E35;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 2px;
+  border: 2px solid #F5F8FF;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+.header .headerwrap .headerbooking:hover {
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  border: 2px solid rgba(234, 234, 238, 0.98);
+  opacity: .8;
+}
+
+@media screen and (min-width: 768px) {
+  .header .headercontent {
+    padding: 44px 25px;
+  }
+  .header .headerwrap .headerleft {
+    margin-right: 25px;
+    max-width: 460px;
+    width: 100%;
+  }
+  .header .headerwrap .headerleft .headertitle {
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+  .header .headerwrap .headerleft .headeraside {
+    margin-bottom: 32px;
+    font-size: 16px;
+  }
+  .header .headerwrap .headerleft .headerartical {
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+  .header .headerwrap .headerleft .headercondition {
+    max-width: 420px;
+    width: 100%;
+  }
+  .header .headerwrap .headerleft .headerbooking {
+    padding: 16px 60px;
+    font-size: 14px;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -321,9 +521,6 @@ textarea {
   }
   .headerwrap .headerleft .headeraside {
     margin-bottom: 30px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
     font-size: 22px;
   }
   .headerwrap .headerleft .headeraside:last-child {
@@ -331,36 +528,12 @@ textarea {
     font-size: 18px;
   }
   .headerwrap .headerleft .headerartical {
-    width: 440px;
-    margin-bottom: 30px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
     font-size: 18px;
-    color: #FFFFFF;
-    opacity: 0.8;
-  }
-  .headerwrap .headerleft .headerprice {
-    margin-bottom: 12px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-  }
-  .headerwrap .headerleft .headerprice span {
-    margin-left: 10px;
-    -webkit-text-decoration-line: line-through;
-            text-decoration-line: line-through;
-    opacity: 0.3;
   }
   .headerwrap .headerleft .headercondition {
     margin-bottom: 25px;
     max-width: 415px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
     font-size: 12px;
-    opacity: 0.5;
   }
   .headerwrap .headerleft .headerbooking {
     display: inline-block;
@@ -416,6 +589,48 @@ textarea {
   display: flex;
 }
 
+.for_whom .for_whom_wrap .for_whom_left .for_whom_left_text {
+  margin-bottom: 20px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #020E35;
+}
+
+.for_whom .for_whom_wrap .for_whom_right {
+  max-width: 355px;
+}
+
+.for_whom .for_whom_wrap .for_whom_right .for_whom_right_text,
+.for_whom .for_whom_wrap .for_whom_right .for_whom_right_title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #020E35;
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .for_whom {
+    padding: 44px 24px;
+  }
+  .for_whom .for_whom_wrap .for_whom_left {
+    max-width: 355px;
+  }
+  .for_whom .for_whom_wrap .for_whom_left .for_whom_left_text {
+    font-size: 14px;
+  }
+  .for_whom .for_whom_wrap .for_whom_right {
+    max-width: 355px;
+  }
+  .for_whom .for_whom_wrap .for_whom_right .for_whom_right_text,
+  .for_whom .for_whom_wrap .for_whom_right .for_whom_right_title {
+    font-size: 14px;
+  }
+}
+
 @media screen and (min-width: 900px) {
   .for_whom {
     padding: 60px 180px;
@@ -430,25 +645,11 @@ textarea {
     width: 100%;
   }
   .for_whom .for_whom_wrap .for_whom_left .for_whom_left_text {
-    margin-bottom: 20px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
     font-size: 16px;
-    color: #020E35;
   }
   .for_whom .for_whom_wrap .for_whom_right {
     max-width: 430px;
     width: 100%;
-  }
-  .for_whom .for_whom_wrap .for_whom_right .for_whom_right_text,
-  .for_whom .for_whom_wrap .for_whom_right .for_whom_right_title {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    color: #020E35;
-    opacity: 0.5;
   }
   .for_whom .for_whom_wrap .for_whom_right .for_whom_right_text {
     margin-bottom: 20px;
@@ -457,6 +658,16 @@ textarea {
 
 .warranty {
   background: #E0E7FF;
+}
+
+.warranty .warranty_title {
+  margin: 0 auto;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+  color: #020E35;
+  font-size: 18px;
 }
 
 .warranty .warranty_wrap .warranty_list .warranty_list_item {
@@ -470,14 +681,69 @@ textarea {
   background: #FFFFFF;
 }
 
-.warranty .warranty_wrap .warranty_white_block .warranty_white_block_text .text {
-  max-width: 570px;
-  width: 100%;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  color: #020E35;
+.warranty .warranty_wrap .warranty_white_block .svgrevers {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+@media screen and (min-width: 768px) {
+  .warranty {
+    padding: 24px 44px;
+  }
+  .warranty .warranty_title {
+    margin-bottom: 25px;
+    font-size: 20px;
+    text-align: center;
+    max-width: 715px;
+    width: 100%;
+  }
+  .warranty .warranty_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .warranty .warranty_wrap .warranty_white_block {
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-right: 12px;
+    gap: 25px;
+  }
+  .warranty .warranty_wrap .warranty_white_block:nth-child(1) .warranty_white_block_text {
+    max-width: 430px;
+  }
+  .warranty .warranty_wrap .warranty_white_block:nth-child(1) .warranty_white_block_text .text {
+    display: inline-block;
+    font-size: 14px;
+  }
+  .warranty .warranty_wrap .warranty_white_block:nth-child(3) {
+    padding-left: 12px;
+  }
+  .warranty .warranty_wrap .warranty_white_block:nth-child(3) .warranty_white_block_text {
+    max-width: 430px;
+  }
+  .warranty .warranty_wrap .warranty_white_block:nth-child(3) .warranty_white_block_text .text {
+    display: inline-block;
+    font-size: 14px;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -485,16 +751,8 @@ textarea {
     padding: 60px 216px;
   }
   .warranty .warranty_title {
-    margin: 0 auto;
-    margin-bottom: 30px;
-    text-align: center;
     max-width: 900px;
-    width: 100%;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
     font-size: 26px;
-    color: #020E35;
   }
   .warranty .warranty_wrap {
     display: -webkit-box;
@@ -528,11 +786,13 @@ textarea {
     padding: 0 15px;
     gap: 25px;
   }
-  .warranty .warranty_wrap .warranty_white_block:last-child {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+  .warranty .warranty_wrap .warranty_white_block .warranty_white_block_text {
+    max-width: 570px;
+  }
+  .warranty .warranty_wrap .warranty_white_block .warranty_white_block_text .text {
+    max-width: 570px;
+    display: inline-block;
+    font-size: 16px;
   }
 }
 

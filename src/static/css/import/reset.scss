@@ -96,15 +96,27 @@ textarea {
         opacity: .8;
     }
 }
+@media screen and (min-width: 768px) {
+    .title {
+        margin-bottom: 35px;
+        font-size: 20px;
+    }
+    .linkbuttom{
 
+        display: inline-block;
+        font-size: 14px;
+    }
+}
 @media screen and (min-width: 900px) {
     .title {
         margin-bottom: 32px;
         font-size: 26px;
-        color: #020E35;
     }
     .linkbuttom{
+        margin: 0 auto;
+        text-align: center;
+        display: inline-block;
+        overflow: hidden;
         font-size: 16px;
-        color: #FFFFFF;
     }
 }

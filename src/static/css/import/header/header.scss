@@ -1,7 +1,7 @@
 .header{
   .headercontent{
     color: rgba(255, 255, 255, 1);
-    padding: 60px 180px;
+    padding: 25px 20px;
     background: rgba(88, 125, 255, 1);
   }
   .headerwrap{
@@ -12,29 +12,14 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .headerwrap{
-    .headerleft{
-      width: 630px;
-      .headertitle{
-        margin-bottom: 15px;
-        font-size: 36px;
+        color: #FFFFFF;
       }
       .headeraside{
-        margin-bottom: 30px;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
-        font-size: 22px;
-        &:last-child{
-          margin-bottom: 12px;
-          font-size: 18px;
-        }
+        font-size: 14px;
+        color: #FFFFFF;
       }
       .headerartical{
         width: 440px;
@@ -42,11 +27,10 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 14px;
         color: #FFFFFF;
         opacity: 0.8;
       }
-
       .headerprice{
         margin-bottom: 12px;
         font-family: 'Montserrat';
@@ -60,13 +44,97 @@
         }
       }
       .headercondition{
-        margin-bottom: 25px;
-        max-width: 415px;
+        margin-bottom: 12px;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+        color: #FFFFFF;
+        opacity: 0.8;
+      }
+    }
+    .headerbooking{
+      display: inline-block;
+      padding: 16px 24px;
+      background: #F5F8FF;
+      color: #020E35;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      border-radius: 2px;
+      border: 2px solid #F5F8FF;
+      transition: .5s;
+      &:hover{
+        transition: .5s;
+        border: 2px solid rgba(234, 234, 238, 0.98);
+        opacity: .8;
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    .headercontent {
+      padding: 44px 25px;
+    }
+    .headerwrap{
+      .headerleft {
+        margin-right: 25px;
+        max-width: 460px;
+        width: 100%;
+        .headertitle {
+          font-size: 30px;
+          margin-bottom: 12px;
+        }
+        .headeraside{
+          margin-bottom: 32px;
+          font-size: 16px;
+        }
+        .headerartical{
+          margin-bottom: 12px;
+          font-size: 16px;
+        }
+        .headercondition{
+          max-width: 420px;
+          width: 100%;
+        }
+        .headerbooking{
+          padding: 16px 60px;
+          font-size: 14px;
+        }
+        }
+      }
+    }
+  }
+
+
+@media screen and (min-width: 900px) {
+  .headerwrap{
+    .headerleft{
+      width: 630px;
+      .headertitle{
+        margin-bottom: 15px;
+        font-size: 36px;
+      }
+      .headeraside{
+        margin-bottom: 30px;
+        font-size: 22px;
+        &:last-child{
+          margin-bottom: 12px;
+          font-size: 18px;
+        }
+      }
+      .headerartical{
+         font-size: 18px;
+      }
+
+        .headercondition{
+        margin-bottom: 25px;
+        max-width: 415px;
         font-size: 12px;
-        opacity: 0.5;
       }
       .headerbooking{
         display: inline-block;
