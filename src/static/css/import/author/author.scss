@@ -1,0 +1,32 @@
+.author{
+  padding: 60px;
+  .authorwrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .authorartical {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      color: #020E35;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .author{
+    background: #ffffff;
+    padding: 60px 215px;
+    .authorwrap{
+      gap: 100px;
+      .authorartical{
+        max-width: 510px;
+        width: 100%;
+        font-size: 16px;
+      }
+    }
+
+  }
+}

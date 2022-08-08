@@ -1,0 +1,111 @@
+
+.price{
+  .wrapcard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pricebox{
+      box-sizing: border-box;
+      border: 4px solid #ffffff;
+      border-radius: 5px;
+      color: #020E35;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #ffffff;
+      transition: .5s;
+      &:hover{
+        background: #E0E7FF;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+        transition: .5s;
+        transform: scale(1.01);
+        .pricerate{
+          background: #ffffff;
+          opacity: 1;
+          transition: .5s;
+        }
+      }
+      .pricerate{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #E0E7FF;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        opacity: 0.8;
+        text-transform: uppercase;
+      }
+      .priceartical{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        opacity: 0.8;
+      }
+      .prices{
+        text-align: center;
+        margin-bottom: 15px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        color: #020E35;
+      }
+    }
+  }
+  .pricetext{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #020E35;
+    opacity: 0.5;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .price{
+    padding: 60px 180px;
+    background: #E0E7FF;
+    .wrapcard{
+      margin-bottom: 30px;
+      justify-content: space-between;
+      .pricebox{
+        cursor: pointer;
+        margin-right: 30px;
+        padding: 20px 20px;
+        width: 350px;
+        height: 490px;
+
+        &:last-child{
+          margin-right: 0;
+        }
+        .pricerate{
+          margin-bottom:25px ;
+          width: 305px;
+          height: 80px;
+          font-size: 22px;
+        }
+        .priceartical{
+          margin: 0 auto;
+          width: 280px;
+          font-size: 16px;
+        }
+        .prices{
+          font-size: 22px;
+        }
+        .linkbuttom{
+          padding: 14px 55px;
+        }
+      }
+    }
+  }
+  .pricetext{
+    font-size: 14px;
+    margin-bottom:20px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}

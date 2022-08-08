@@ -1,0 +1,116 @@
+.program{
+  padding: 60px ;
+  .wrap_number_module{
+    display: flex;
+    .number_module{
+      margin: 0;
+      padding: 0;
+  }
+    .number_module_show{
+      border: 2px solid #587dff;
+      border-bottom: none;
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: rgba(210, 220, 255, 0.2);
+      }
+    }
+  }
+
+  .module{
+    display: none;
+    background: #D2DCFF;
+    border-radius: 0 5px 5px 5px;
+
+    &:nth-child(2n-1){
+      background: #F5F8FF;
+    }
+    .titlemodule{
+      font-style: normal;
+      font-weight: 700;
+      color: #020E35;
+      opacity: 0.8;
+    }
+    .module_wrap_list{
+      display: flex;
+      justify-content: space-between;
+      .right{
+        .module_list_item{
+          padding-left: 12px;
+          &:first-child{
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+  .module_show{
+    display: block;
+    border: 2px solid #587dff;
+  }
+}
+@media screen and (min-width: 900px) {
+  .program{
+    padding: 60px 180px;
+    .wrap_number_module{
+      .number_module{
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        margin: 0;
+        padding: 15px 25px;
+        background: #F5F8FF;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        text-align: center;
+        color: #020E35;
+        border-bottom: none;
+
+        &:nth-child(2n-1){
+          background: #D2DCFF;
+          border-bottom: none;
+
+        }
+      }
+    }
+
+    .module{
+      min-height: 330px;
+      height: 100%;
+      padding: 35px 45px 35px 65px;
+      .titlemodule{
+        margin-bottom: 16px;
+        font-size: 22px;
+      }
+      .module_wrap_list {
+        gap: 20px;
+        .module_list{
+          max-width: 550px;
+          width: 100%;
+          .module_list_item{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            color: #020E35;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1500px) {
+  .program{
+    .module{
+      padding: 35px 100px;
+      .module_wrap_list {
+        gap: 0;
+      }
+      }
+    }
+}

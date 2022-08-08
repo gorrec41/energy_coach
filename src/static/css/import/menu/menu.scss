@@ -1,0 +1,120 @@
+.nav{
+  .desctopnav{
+    display: none;
+  }
+  .line,
+  .line:after,
+  .line:before{
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 3px;
+    right: 20px;
+    background: rgba(12, 12, 12, 0.37);
+    z-index: 100;
+  }
+  .line{
+    top: 20px;
+  }
+  .line:after{
+    top: 30px;
+    right: 0;
+  }
+  .line::before{
+    top: 15px;
+    right: 0;
+  }
+  .lineactive.line{
+    transform: rotate(45deg);
+    background: rgba(255, 255, 255, 0.99);
+    &:before{
+      background: rgba(88, 125, 255, 0);
+    }
+    &:after{
+      top: 0;
+      transform: rotate(-90deg);
+      background: rgba(255, 255, 255, 0.99);
+    }
+  }
+    .burger{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -3000%;
+      width: 100%;
+      background: rgba(88, 125, 255, 1);
+      transition: 2s;
+      color: #fff;
+      &_list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        &_item{
+          font-size: 25px;
+          margin-bottom: 20px;
+          &:last-child{
+            margin-bottom: 0;
+          }
+          .navlink{
+            color: #fff;
+          }
+        }
+      }
+    }
+  .burgershow{
+    left: 0;
+    transition: 1s;
+  }
+}
+@media screen and (min-width: 850px) {
+  .nav{
+    padding:20px 60px;
+    .line{
+      display: none;
+    }
+    .desctopnav{
+        display: flex;
+        justify-content: space-between;
+        text-rendering: optimizeSpeed;
+      .logo_nav_link{
+        color: #020E35;
+        text-rendering: optimizeSpeed;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 16px;
+      }
+      .desc_list{
+        display: flex;
+        .desc_list_item{
+          margin-right:15px ;
+          &:last-child{
+            margin-right: 0;
+          }
+          .scgiconnav{
+            margin-right:8px ;
+          }
+        }
+        .descnavlink{
+          color: #020E35;
+          text-rendering: optimizeSpeed;
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  }
+@media screen and (min-width: 1500px) {
+  .nav {
+    padding: 20px 115px;
+  }
+}

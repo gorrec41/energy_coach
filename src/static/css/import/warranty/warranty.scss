@@ -1,0 +1,71 @@
+.warranty{
+  background: #E0E7FF;
+  .warranty_title{
+  }
+  .warranty_wrap {
+    .warranty_list{
+
+      .warranty_list_item{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        color: #020E35;
+      }
+
+    }
+    .warranty_white_block {
+      background: #FFFFFF;
+        .warranty_white_block_text{
+          .text{
+            max-width: 570px;
+            width: 100%;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            color: #020E35;
+          }
+        }
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .warranty{
+    padding: 60px 216px;
+    .warranty_title{
+      margin: 0 auto;
+      margin-bottom: 30px;
+      text-align: center;
+      max-width: 900px;
+      width: 100%;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 26px;
+      color: #020E35;
+    }
+    .warranty_wrap{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .warranty_list{
+        margin-bottom: 30px;
+        .warranty_list_item{
+          font-size: 16px;
+        }
+      }
+      .warranty_white_block {
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+        gap: 25px;
+        &:last-child{
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+}
