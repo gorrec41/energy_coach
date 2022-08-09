@@ -4,29 +4,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     .authorartical {
       font-family: 'Montserrat';
       font-style: normal;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 14px;
       color: #020E35;
     }
   }
 }
-
+@media screen and (min-width: 768px) {
+  .author {
+    padding: 44px 24px ;
+    .authorwrap {
+      .authorartical {
+        max-width: 450px;
+        width: 100%;
+      }
+    }
+  }
+}
 @media screen and (min-width: 900px) {
-  .author{
+  .author {
     background: #ffffff;
     padding: 60px 215px;
-    .authorwrap{
+
+    .authorwrap {
       gap: 100px;
-      .authorartical{
+      .authorartical {
         max-width: 510px;
         width: 100%;
         font-size: 16px;
       }
-    }
 
+    }
   }
 }

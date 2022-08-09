@@ -10,80 +10,44 @@
     font-size: 18px;
   }
   .warranty_wrap {
-    .warranty_list{
+       .warranty_list{
+      margin-bottom: 15px;
       .warranty_list_item{
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
         color: #020E35;
+        font-size: 14px;
       }
     }
     .warranty_white_block {
       background: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
       .svgrevers{
         transform: rotate(180deg);
       }
-        //.warranty_white_block_text{
-        //  .text{
-        //    max-width: 570px;
-        //    width: 100%;
-        //    font-family: 'Montserrat';
-        //    font-style: normal;
-        //    font-weight: 400;
-        //    font-size: 12px;
-        //    color: #020E35;
-        //  }
-        //}
     }
   }
 }
 @media screen and (min-width: 768px) {
   .warranty {
     padding: 24px 44px;
-
-    .warranty_title {
-      margin-bottom: 25px;
-      font-size: 20px;
-      text-align: center;
-      max-width: 715px;
-      width: 100%;
-    }
-
-    .warranty_wrap {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .warranty_white_block {
-        margin-bottom: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-right: 12px;
-        gap: 25px;
-      }
-
-      .warranty_white_block:nth-child(1) {
-        .warranty_white_block_text {
+    .warranty_wrap{
+      .warranty_white_block{
+        flex-direction: row;
+        .warranty_white_block_text{
           max-width: 430px;
-
-          .text {
-            display: inline-block;
-            font-size: 14px;
-          }
         }
-      }
-
-      .warranty_white_block:nth-child(3) {
-        padding-left: 12px;
-
-        .warranty_white_block_text {
-          max-width: 430px;
-
-          .text {
-            display: inline-block;
-            font-size: 14px;
-          }
+        &:first-child{
+          padding-right: 12px;
+        }
+        &:nth-child(3){
+          padding-left: 12px;
+          margin-bottom: 12px;
         }
       }
     }
@@ -116,7 +80,6 @@
         justify-content: space-between;
         padding: 0 15px;
         gap: 25px;
-
         .warranty_white_block_text {
           max-width: 570px;
           .text {

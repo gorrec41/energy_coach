@@ -1,7 +1,11 @@
-
 .price{
+  background: #E0E7FF;
+  height: 100%;
+  width: 100%;
   .wrapcard{
+    margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     .pricebox{
@@ -12,11 +16,12 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      align-items: center;
       background: #ffffff;
       transition: .5s;
       &:hover{
         background: #E0E7FF;
-        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
         transition: .5s;
         transform: scale(1.01);
         .pricerate{
@@ -30,14 +35,12 @@
         justify-content: center;
         align-items: center;
         background: #E0E7FF;
-        font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
         opacity: 0.8;
         text-transform: uppercase;
       }
       .priceartical{
-        font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
         opacity: 0.8;
@@ -45,7 +48,6 @@
       .prices{
         text-align: center;
         margin-bottom: 15px;
-        font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
         font-size: 22px;
@@ -54,7 +56,6 @@
     }
   }
   .pricetext{
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -63,11 +64,40 @@
     opacity: 0.5;
   }
 }
+@media screen and (min-width: 768px) {
+  .price {
+    padding: 44px 24px;
+    .pricetext {
+      font-size: 12px;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .wrapcard{
+    .pricebox{
+      padding: 20px;
+      margin-bottom: 16px;
+      width: 347px;
+      height: 491px;
+      .pricerate{
+        margin-bottom: 24px;
+        padding: 20px 100px;
+        font-size: 18px;
+      }
+      .priceartical{
+        font-size: 14px;
+      }
 
+
+    }
+
+  }
+}
 @media screen and (min-width: 900px) {
   .price{
     padding: 60px 180px;
-    background: #E0E7FF;
     .wrapcard{
       margin-bottom: 30px;
       justify-content: space-between;

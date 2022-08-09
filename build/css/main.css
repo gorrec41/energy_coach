@@ -116,6 +116,9 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
+  section {
+    padding: 44px 24px;
+  }
   .title {
     margin-bottom: 35px;
     font-size: 20px;
@@ -670,15 +673,34 @@ textarea {
   font-size: 18px;
 }
 
+.warranty .warranty_wrap .warranty_list {
+  margin-bottom: 15px;
+}
+
 .warranty .warranty_wrap .warranty_list .warranty_list_item {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   color: #020E35;
+  font-size: 14px;
 }
 
 .warranty .warranty_wrap .warranty_white_block {
   background: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
 }
 
 .warranty .warranty_wrap .warranty_white_block .svgrevers {
@@ -691,58 +713,21 @@ textarea {
   .warranty {
     padding: 24px 44px;
   }
-  .warranty .warranty_title {
-    margin-bottom: 25px;
-    font-size: 20px;
-    text-align: center;
-    max-width: 715px;
-    width: 100%;
-  }
-  .warranty .warranty_wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   .warranty .warranty_wrap .warranty_white_block {
-    margin-bottom: 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding-right: 12px;
-    gap: 25px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-  .warranty .warranty_wrap .warranty_white_block:nth-child(1) .warranty_white_block_text {
+  .warranty .warranty_wrap .warranty_white_block .warranty_white_block_text {
     max-width: 430px;
   }
-  .warranty .warranty_wrap .warranty_white_block:nth-child(1) .warranty_white_block_text .text {
-    display: inline-block;
-    font-size: 14px;
+  .warranty .warranty_wrap .warranty_white_block:first-child {
+    padding-right: 12px;
   }
   .warranty .warranty_wrap .warranty_white_block:nth-child(3) {
     padding-left: 12px;
-  }
-  .warranty .warranty_wrap .warranty_white_block:nth-child(3) .warranty_white_block_text {
-    max-width: 430px;
-  }
-  .warranty .warranty_wrap .warranty_white_block:nth-child(3) .warranty_white_block_text .text {
-    display: inline-block;
-    font-size: 14px;
+    margin-bottom: 12px;
   }
 }
 
@@ -808,7 +793,22 @@ textarea {
 
 .program .wrap_number_module .number_module {
   margin: 0;
-  padding: 0;
+  padding: 15px 25px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background: #F5F8FF;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  color: #020E35;
+  border-bottom: none;
+}
+
+.program .wrap_number_module .number_module:nth-child(2n-1) {
+  background: #D2DCFF;
+  border-bottom: none;
 }
 
 .program .wrap_number_module .number_module_show {
@@ -828,6 +828,8 @@ textarea {
 
 .program .module {
   display: none;
+  min-height: 330px;
+  height: 100%;
   background: #D2DCFF;
   border-radius: 0 5px 5px 5px;
 }
@@ -863,6 +865,36 @@ textarea {
 .program .module_show {
   display: block;
   border: 2px solid #587dff;
+}
+
+.program .programwrapbtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .program {
+    padding: 44px 24px;
+  }
+  .module {
+    padding: 20px 32px;
+    margin-bottom: 16px;
+  }
+  .module .titlemodule {
+    margin-bottom: 16px;
+  }
+  .module .module_list {
+    min-width: 310px;
+    width: 100%;
+    font-size: 14px;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -921,10 +953,21 @@ textarea {
   }
 }
 
+.price {
+  background: #E0E7FF;
+  height: 100%;
+  width: 100%;
+}
+
 .price .wrapcard {
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -949,6 +992,9 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #ffffff;
   -webkit-transition: .5s;
   -o-transition: .5s;
@@ -957,8 +1003,8 @@ textarea {
 
 .price .wrapcard .pricebox:hover {
   background: #E0E7FF;
-  -webkit-box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   -webkit-transition: .5s;
   -o-transition: .5s;
   transition: .5s;
@@ -986,7 +1032,6 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   background: #E0E7FF;
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
   opacity: 0.8;
@@ -994,7 +1039,6 @@ textarea {
 }
 
 .price .wrapcard .pricebox .priceartical {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   opacity: 0.8;
@@ -1003,7 +1047,6 @@ textarea {
 .price .wrapcard .pricebox .prices {
   text-align: center;
   margin-bottom: 15px;
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -1011,7 +1054,6 @@ textarea {
 }
 
 .price .pricetext {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1020,10 +1062,36 @@ textarea {
   opacity: 0.5;
 }
 
+@media screen and (min-width: 768px) {
+  .price {
+    padding: 44px 24px;
+  }
+  .price .pricetext {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .price .pricetext:last-child {
+    margin-bottom: 0;
+  }
+  .wrapcard .pricebox {
+    padding: 20px;
+    margin-bottom: 16px;
+    width: 347px;
+    height: 491px;
+  }
+  .wrapcard .pricebox .pricerate {
+    margin-bottom: 24px;
+    padding: 20px 100px;
+    font-size: 18px;
+  }
+  .wrapcard .pricebox .priceartical {
+    font-size: 14px;
+  }
+}
+
 @media screen and (min-width: 900px) {
   .price {
     padding: 60px 180px;
-    background: #E0E7FF;
   }
   .price .wrapcard {
     margin-bottom: 30px;
@@ -1087,8 +1155,18 @@ textarea {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   color: #020E35;
+}
+
+@media screen and (min-width: 768px) {
+  .author {
+    padding: 44px 24px;
+  }
+  .author .authorwrap .authorartical {
+    max-width: 450px;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 900px) {

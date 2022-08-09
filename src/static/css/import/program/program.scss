@@ -4,7 +4,21 @@
     display: flex;
     .number_module{
       margin: 0;
-      padding: 0;
+      padding: 15px 25px;
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      background: #F5F8FF;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      text-align: center;
+      color: #020E35;
+      border-bottom: none;
+      &:nth-child(2n-1){
+        background: #D2DCFF;
+        border-bottom: none;
+      }
   }
     .number_module_show{
       border: 2px solid #587dff;
@@ -23,9 +37,10 @@
 
   .module{
     display: none;
+    min-height: 330px;
+    height: 100%;
     background: #D2DCFF;
     border-radius: 0 5px 5px 5px;
-
     &:nth-child(2n-1){
       background: #F5F8FF;
     }
@@ -52,6 +67,30 @@
     display: block;
     border: 2px solid #587dff;
   }
+  .programwrapbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .program {
+    padding: 44px 24px;
+  }
+  .module{
+    padding: 20px 32px;
+    margin-bottom: 16px;
+    .titlemodule{
+      margin-bottom: 16px;
+
+    }
+    .module_list{
+      min-width: 310px;
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+
 }
 @media screen and (min-width: 900px) {
   .program{
@@ -70,11 +109,9 @@
         text-align: center;
         color: #020E35;
         border-bottom: none;
-
         &:nth-child(2n-1){
           background: #D2DCFF;
           border-bottom: none;
-
         }
       }
     }
