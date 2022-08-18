@@ -5,39 +5,38 @@
       display: none;
     }
   }
-  .line,
-  .line:after,
-  .line:before{
-    position: absolute;
+  .linemob,
+  .linemob:after,
+  .linemob:before{
+    position: fixed;
     content: '';
     width: 40px;
     height: 3px;
     right: 30px;
     background: rgba(12, 12, 12, 0.37);
-    z-index: 100;
+    z-index: 105;
     transition: 1s;
   }
-  .line{
-    top: 40px;
-  }
-  .line:after{
-    top: 20px;
-    right: 0;
-  }
-  .line::before{
+  .linemob{
     top: 10px;
-    right: 0;
   }
-  .lineactive.line{
+  .linemob:after{
+    top: 20px;
+  }
+  .linemob::before{
+    top: 30px;
+  }
+  .linemobactive.linemob{
     transform: rotate(45deg);
     background: #fff;
-    top: 20px;
+    top: 35px;
     transition: 1s;
     &:before{
       background: none;
     }
     &:after{
-      top: 0;
+      top: 1px;
+      right: 1px;
       transform: rotate(-90deg);
       background: #fff;
       transition: 1s;
@@ -48,7 +47,7 @@
       align-items: center;
       justify-content: center;
       content: '';
-      position: absolute;
+      position: fixed;
       top: 0;
       bottom: 0;
       left: -3000%;
@@ -56,6 +55,7 @@
       background: rgba(88, 125, 255, 1);
       transition: 2s;
       color: #fff;
+      z-index: 100;
       &_list{
         display: flex;
         justify-content: space-between;
@@ -75,14 +75,15 @@
     }
   .burgershow{
     left: 0;
+
     transition: 1s;
   }
 }
 @media screen and (min-width: 768px) {
   .nav{
-    .line,
-    .line:after,
-    .line:before{
+    .linemob,
+    .linemob:after,
+    .linemob:before{
       position: absolute;
       content: '';
       width: 20px;
@@ -90,14 +91,13 @@
       background: #020E35;
       z-index: 100;
     }
-    .line:after,
-    .line:before{
+    .linemob:after,
+    .linemob:before{
       right: 0;
     }
-    .line{
+    .linemob{
       top: 20px;
       right: 20px;
-
     }
     padding:20px 60px;
     .desctopnav{
@@ -137,10 +137,10 @@
     }
   }
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 1100px) {
   .nav{
     padding:20px 60px;
-    .line{
+    .linemob{
       display: none;
     }
     .desctopnav{

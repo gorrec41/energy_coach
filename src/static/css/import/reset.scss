@@ -72,7 +72,7 @@ textarea {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
-    font-size: 26px;
+    font-size:18px;
     text-align: center;
     text-transform: uppercase;
     color: #020E35;
@@ -80,12 +80,12 @@ textarea {
 .linkbuttom{
     box-sizing: border-box;
     display: inline-block;
-    padding: 15px 60px;
+    padding: 15px 58px;
     background: #587DFF;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     color: #FFFFFF;
     transition: .5s;
     border: 2px solid #587DFF;
@@ -105,12 +105,24 @@ textarea {
         font-size: 20px;
     }
     .linkbuttom{
-
         display: inline-block;
         font-size: 14px;
     }
 }
 @media screen and (min-width: 900px) {
+    .title {
+        margin-bottom: 32px;
+        font-size: 26px;
+    }
+    .linkbuttom{
+        margin: 0 auto;
+        text-align: center;
+        display: inline-block;
+        overflow: hidden;
+        font-size: 16px;
+    }
+}
+@media screen and (min-width: 1200px) {
     .title {
         margin-bottom: 32px;
         font-size: 26px;

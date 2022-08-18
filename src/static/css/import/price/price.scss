@@ -2,6 +2,7 @@
   background: #E0E7FF;
   height: 100%;
   width: 100%;
+  padding:24px 15px;
   .wrapcard{
     margin: 0 auto;
     display: flex;
@@ -9,6 +10,9 @@
     justify-content: center;
     align-items: center;
     .pricebox{
+      margin-bottom: 15px;
+      padding: 20px;
+      min-height: 460px;
       box-sizing: border-box;
       border: 4px solid #ffffff;
       border-radius: 5px;
@@ -28,9 +32,15 @@
           background: #ffffff;
           opacity: 1;
           transition: .5s;
+
         }
       }
+      .upbox{
+        margin-bottom: 15px;
+      }
       .pricerate{
+        margin-bottom: 15px;
+        padding: 30px 75px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -76,6 +86,8 @@
     }
   }
   .wrapcard{
+    display: flex;
+   align-items: center;
     .pricebox{
       padding: 20px;
       margin-bottom: 16px;
@@ -103,7 +115,6 @@
       justify-content: space-between;
       .pricebox{
         cursor: pointer;
-        margin-right: 30px;
         padding: 20px 20px;
         width: 350px;
         height: 490px;
@@ -136,6 +147,27 @@
     margin-bottom:20px;
     &:last-child{
       margin-bottom: 0;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .price {
+    padding: 60px 60px;
+    .wrapcard {
+      flex-direction: row;
+      margin-bottom: 30px;
+      justify-content: space-between;
+      align-items: center;
+      .pricebox {
+        cursor: pointer;
+        margin-right: 30px;
+        padding: 20px 20px;
+        width: 350px;
+        height: 490px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
   }
 }

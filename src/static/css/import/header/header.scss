@@ -6,8 +6,31 @@
   }
   .headerwrap{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     .headerleft{
+      display: none;
+    }
+    .headermobilup{
+      padding-top: 24px;
+      .headertitle{
+        margin-bottom: 12px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+      }
+      .headeraside{
+        margin-bottom: 25px;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+    .headerleft,
+    .headermobilup,
+    .headermobildown{
       .headertitle{
         font-family: 'Montserrat';
         font-style: normal;
@@ -22,7 +45,6 @@
         color: #FFFFFF;
       }
       .headerartical{
-        width: 440px;
         margin-bottom: 30px;
         font-family: 'Montserrat';
         font-style: normal;
@@ -55,6 +77,7 @@
         opacity: 0.8;
       }
     }
+
     .headerbooking{
       display: inline-block;
       padding: 16px 24px;
@@ -74,6 +97,28 @@
       }
     }
   }
+  .headermobildown{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .headerartical{
+      max-width: 260px;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .headerprice{
+      text-align: center;
+      font-weight: 400;
+      font-size: 22px;
+    }
+    .headercondition{
+      margin-bottom: 12px;
+    }
+  }
+}
+.headerright{
+  margin-bottom: 24px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -81,7 +126,15 @@
       padding: 44px 25px;
     }
     .headerwrap{
+      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+      .headermobilup,
+      .headermobildown{
+        display: none;
+      }
       .headerleft {
+        display: block;
         margin-right: 25px;
         max-width: 460px;
         width: 100%;
@@ -107,6 +160,9 @@
         }
         }
       }
+    .headerright{
+     margin: 0;
+    }
     }
   }
 
@@ -130,7 +186,6 @@
       .headerartical{
          font-size: 18px;
       }
-
         .headercondition{
         margin-bottom: 25px;
         max-width: 415px;
@@ -156,6 +211,7 @@
       }
     }
     .headerright{
+      margin: 0;
       .wraptimg{
         position: relative;
         max-width: 318px;

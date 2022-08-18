@@ -2,6 +2,7 @@
   padding: 60px;
   .authorwrap {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     .authorartical {
@@ -10,6 +11,7 @@
       font-weight: 400;
       font-size: 14px;
       color: #020E35;
+      margin-bottom: 25px;
     }
   }
 }
@@ -17,6 +19,7 @@
   .author {
     padding: 44px 24px ;
     .authorwrap {
+      flex-direction: row;
       .authorartical {
         max-width: 450px;
         width: 100%;
@@ -27,16 +30,24 @@
 @media screen and (min-width: 900px) {
   .author {
     background: #ffffff;
-    padding: 60px 215px;
+    padding: 50px 25px;
 
     .authorwrap {
       gap: 100px;
       .authorartical {
-        max-width: 510px;
         width: 100%;
         font-size: 16px;
       }
 
     }
   }
+}
+@media screen and (min-width: 1200px) {
+  .author {
+    padding: 60px 215px;
+  }
+  .authorartical {
+    max-width: 510px;
+  }
+
 }

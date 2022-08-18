@@ -1,8 +1,9 @@
 include  ../linkbutton/linkbutton
-section.program
+section.program#program
     h2.title
         |Программа курса
     .container
+        include program_mobile/program_mobile
         .wrap_number_module
             p.number_module
                 |1
@@ -20,6 +21,6 @@ section.program
                 | 7
             p.number_module
                 | Сертификация коуча
-        include ./module/module
+        include module/module
         .programwrapbtn
-            +linkbuttom('#','Стать участником курса')
+            +linkbuttom('#price','Стать участником курса')

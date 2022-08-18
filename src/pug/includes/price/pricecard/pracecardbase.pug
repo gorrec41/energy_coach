@@ -1,0 +1,13 @@
+include  ../../linkbutton/linkbutton
+
+mixin cardbase(rate,text1,text2,text3,text4,price)
+    .pricebox
+        .upbox
+            p.pricerate=rate
+            p.priceartical=text1
+            p.priceartical=text2
+            p.priceartical=text3
+            p.priceartical=text4
+        .downbox
+            p.prices=price
+            +linkbuttom('https://shkolaneo.ru/page186','Забронировать место')

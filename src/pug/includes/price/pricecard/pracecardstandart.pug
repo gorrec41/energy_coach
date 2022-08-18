@@ -1,6 +1,6 @@
 include  ../../linkbutton/linkbutton
 
-mixin card(rate,text1,text2,text3,text4,price)
+mixin cardstandart(rate,text1,text2,text3,text4,price)
     .pricebox
         .upbox
             p.pricerate=rate
@@ -10,4 +10,4 @@ mixin card(rate,text1,text2,text3,text4,price)
             p.priceartical=text4
         .downbox
             p.prices=price
-            +linkbuttom('#','Забронировать место')
+            +linkbuttom('https://shkolaneo.ru/page188','Забронировать место')

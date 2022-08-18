@@ -1,8 +1,21 @@
 .for_whom{
-  padding: 60px;
+  padding: 24px 15px;
   .for_whom_wrap{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    .for_whom_mobilup{
+      .for_whom_left_text {
+        margin-bottom: 20px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        color: #020E35;
+      }
+    }
     .for_whom_left {
+      display: none;
       .for_whom_left_text {
         margin-bottom: 20px;
         font-family: 'Montserrat';
@@ -13,7 +26,8 @@
       }
     }
     .for_whom_right {
-      max-width: 355px;
+      max-width: 500px;
+      margin-bottom: 15px;
       .for_whom_right_text,
       .for_whom_right_title {
         font-family: 'Montserrat';
@@ -30,7 +44,12 @@
   .for_whom{
     padding: 44px 24px;
     .for_whom_wrap {
+      flex-direction: row;
+      .for_whom_mobilup{
+        display: none;
+      }
       .for_whom_left {
+        display: block;
         max-width: 355px;
         .for_whom_left_text {
           font-size: 14px;
@@ -42,6 +61,9 @@
         .for_whom_right_title {
           font-size: 14px;
         }
+      }
+      .for_whom_mobildown{
+        display: none;
       }
     }
   }
